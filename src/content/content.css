@@ -1,0 +1,34 @@
+/***************************************
+  Blomberg
+*/
+
+body[data-paywall-overlay-status="show"] {
+  overflow: auto !important;
+}
+#graphics-paywall-overlay {
+  display: none;
+}
+
+/***************************************
+  Blomberg
+*/
+
+.tp-modal {
+  display: none;
+}
+
+/***************************************
+  Forbes
+*/
+
+page-standard {
+  position: static !important;
+}
+/* fbs-ad,
+medianet,
+.recirc-container {
+  display: none;
+} */
+*[aria-hidden="true"] {
+  display: none;
+}
