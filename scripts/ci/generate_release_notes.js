@@ -16,8 +16,8 @@ changelog.releases[0].changes.forEach((changes, key) => {
   source += changes.reduce((prev, change) => `${prev}${change}\n`, "");
 });
 
-const chromeUri = "https://chrome.google.com/webstore/detail/free-press/TO_UPDATE";
-const firefoxUri = "https://addons.mozilla.org/en-US/firefox/addon/free-press/";
+const chromeUri =
+  "https://chrome.google.com/webstore/detail/free-press/glmnaokgbaeaeldfanghdlblcbfhjpho";
 const uriStart = "https://github.com/edouardhienrichs/free-press/releases/download";
 const uriEnd = "/free-press-unsigned.zip";
 const sourceWithLink = `${source.trim()}
@@ -25,7 +25,6 @@ const sourceWithLink = `${source.trim()}
 ---
 
 - [Install Chrome Extension](${chromeUri})
-- [Install Firefox Extension](${firefoxUri})
 - [Download Unsigned Browser Extension](${uriStart}/v${process.env.npm_package_version}${uriEnd})`;
 
 writeFileSync("./RELEASE_NOTES.md", sourceWithLink, "utf8");
