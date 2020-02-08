@@ -1,6 +1,6 @@
 {
   "name": "free-press",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Chrome & Firefox extension to read Press for free.",
   "license": "MIT",
   "private": true,
