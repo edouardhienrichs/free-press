@@ -3,6 +3,7 @@
 [![Latest Version][img-version]][link-version]
 [![Build Status][img-travis]][link-travis]
 [![Code Coverage][img-coveralls]][link-coveralls]
+[![Chrome Users][img-chrome]][link-chrome]
 [![Open in Gitpod][img-gitpod]][link-gitpod]
 
 Browser extension to read online newspapers for free.
@@ -46,11 +47,13 @@ npm version [MINOR|PATCH]
 
 ---
 
+[img-chrome]: https://img.shields.io/badge/Chrome-Web%20Store-green?style=flat-square
 [img-coveralls]: https://img.shields.io/coveralls/github/edouardhienrichs/free-press/master?style=flat-square
 [img-gitpod]: https://img.shields.io/badge/Gitpod-ready_to_code-blue?logo=gitpod&style=flat-square
 [img-travis]: https://img.shields.io/travis/com/edouardhienrichs/free-press/master?style=flat-square
 [img-version]: https://img.shields.io/github/package-json/v/edouardhienrichs/free-press?style=flat-square
 
+[link-chrome]: https://chrome.google.com/webstore/detail/free-press/glmnaokgbaeaeldfanghdlblcbfhjpho
 [link-coveralls]: https://coveralls.io/github/edouardhienrichs/free-press
 [link-gitpod]: https://gitpod.io/from-referrer/
 [link-license]: https://github.com/edouardhienrichs/free-press/blob/master/LICENSE
