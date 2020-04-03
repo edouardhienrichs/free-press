@@ -55,16 +55,12 @@ const $bloombergMeta = document.querySelector(`meta[property="al:android:app_nam
 if ($bloombergMeta !== null && $bloombergMeta.content === "Bloomberg") {
   connection.postMessage({ value: CHANNEL_MESSAGE.TAB_IS_BLOOMBERG });
 
-  // console.info("This is Bloomberg!");
-
   cleanBloomberg();
 }
 
 const $businessInsiderMeta = document.querySelector(`meta[property="og:site_name"]`);
 if ($businessInsiderMeta !== null && $businessInsiderMeta.content.startsWith("Business Insider")) {
   connection.postMessage({ value: CHANNEL_MESSAGE.TAB_IS_BUSINESS_INSIDER });
-
-  console.info("This is Business Insider!");
 
   cleanBusinessInsider();
 }
@@ -73,8 +69,17 @@ const $forbesMeta = document.querySelector(`meta[property="og:site_name"]`);
 if ($forbesMeta !== null && $forbesMeta.content === "Forbes") {
   connection.postMessage({ value: CHANNEL_MESSAGE.TAB_IS_FORBES });
 
-  // console.info("This is Forbes!");
-
   const $adblockModal = document.querySelector("adblock-modal");
-  $adblockModal.parentNode.removeChild($adblockModal);
+  if ($adblockModal !== null) {
+    $adblockModal.parentNode.removeChild($adblockModal);
+  }
+
+  const $body = document.querySelector("body");
+  if ($body.classList.contains("adblock-on")) {
+    const $adblockModalContainer = document.querySelector(".fbs-auth__container");
+    $adblockModalContainer.parentNode.removeChild($adblockModalContainer);
+
+    $body.classList.remove("adblock-on");
+    $body.classList.remove("body--no-scroll");
+  }
 }
